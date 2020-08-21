@@ -6,12 +6,13 @@ const OptionBlock = (props) => {
     const [active_m, setActive_M] = useState([])
     const [active_s, setActive_S] = useState(-1)
 
-    const handleMultiClick = index => {
+    const handleMultiClick = (index) => {
         const i = active_m.findIndex((element) => element == index)
         if (i < 0) {
             setActive_M([...active_m, index])
+
         } else {
-            setActive_M(active_m.splice(i, 1))
+            setActive_M(active_m.filter(element => element != index))
         }
     }
 
