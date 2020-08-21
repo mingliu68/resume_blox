@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
+import { Route, useLocation } from "react-router-dom";
+import ResumeMaker from './components/ResumeMaker'
 
-function App() {
+function App(props) {
+
+  const location = useLocation();
+
+  const goToRoute = (routeTarget) => {
+    props.history.push(routeTarget)
+  }
+
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div onClick={() => goToRoute('/')}><h1 >resumeBlox</h1></div>
+        <button onClick={() => goToRoute('/create')} className={location.pathname == "/create" ? "currentLink" : null}>Create a new Resume</button>
       </header>
+      <Route path='/create' component={ResumeMaker} />
     </div>
   );
 }

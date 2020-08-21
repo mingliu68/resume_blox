@@ -15,14 +15,41 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100px; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  /* font-size: calc(10px + 2vmin); */
   color: white;
+  padding: 0 20px;
 }
+
+.App-header button { 
+  padding: 15px;
+  background-color: grey;
+  font-size: 18px;
+  color: white;
+  border: 1px solid #282c34;
+  font-weight: bold;
+  outline: none;  
+  border-radius: 8px;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+
+.App-header button:hover, .App-header button:active {
+  background-color: darkgreen;
+  outline: none;
+  transition-duration: 0.25s;
+
+}
+
+.App-header  .currentLink {
+  background-color: darkgreen;
+  outline: none;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -35,4 +62,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.draggable_box_container {
+  display: flex;
+}
+
+.draggable_box {
+  padding: 10px 15px;
+  margin: 3px;
+  background-color: #282c34;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
