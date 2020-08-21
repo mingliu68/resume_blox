@@ -9,11 +9,11 @@ export const user_resources = {
             "Backend Developer",
             "Full Stack Engineer"
         ],
-        tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"]
+        _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"]
     },
     contact: {
-        email: ["ming@brooksidemediaco.com", "mingliudev@gmail.com"],
-        phone: ["347-882-0395", "516-662-6028"],
+        _email: ["ming@brooksidemediaco.com", "mingliudev@gmail.com"],
+        _phone: ["347-882-0395", "516-662-6028"],
         location: ["New York, NY", "Ithaca, NY"],
     },
     summary: {
@@ -23,7 +23,7 @@ export const user_resources = {
             "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
             "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
         ],
-        tags: ["AWS", "DevOp", "Cloud", "Product Manager", "React", "Python"]
+        _tags: ["AWS", "DevOp", "Cloud", "Product Manager", "React", "Python"]
     },
     social: [
         {
@@ -41,7 +41,7 @@ export const user_resources = {
     ],
     skills: {
         title: ['Technology', 'Tech Stack', 'Soft Skills', 'Web Dev', 'Languages', 'Frameworks', 'Libraries'],
-        skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js']
+        _skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js']
     },
     education: [
         {
@@ -88,7 +88,7 @@ export const user_resources = {
                 "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
                 "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
             ],
-            tags: ['React', 'Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3']
+            _tags: ['React', 'Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3']
         },
     ],
     experience: [
@@ -105,7 +105,7 @@ export const user_resources = {
                 "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
                 "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
             ],
-            tags: ['Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3', 'Swift', 'Blender 3D']
+            _tags: ['Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3', 'Swift', 'Blender 3D']
         },
         {
             title: ["Web Developer", "Full Stack Web Developer", "Full Stack Web Engineer", "Full Stack Engineer"],
@@ -120,7 +120,7 @@ export const user_resources = {
                 "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
                 "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
             ],
-            tags: ['Project Management', 'React', 'Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3', 'Blender 3D', 'WordPress', 'BootStrap', 'MaterialUI', 'WooCommerce', 'PrestaShop']
+            _tags: ['Project Management', 'React', 'Redux', 'React Native', 'PostgreSQL', 'Node.js', 'JavaScript', 'HTML5', 'CSS3', 'Blender 3D', 'WordPress', 'BootStrap', 'MaterialUI', 'WooCommerce', 'PrestaShop']
         },
     ]
 }

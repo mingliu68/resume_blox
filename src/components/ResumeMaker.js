@@ -1,6 +1,6 @@
 import React from 'react';
 import { user_resources, blocks_options } from "../data";
-import PersonalBlock from './PersonalBlock'
+import OptionBlock from './OptionBlock'
 
 const ResumeMaker = (props) => {
 
@@ -12,10 +12,10 @@ const ResumeMaker = (props) => {
                 {
                     Object.entries(user_resources.personal).map(([key, value], i) => {
                         if (Array.isArray(value)) {
-                            return <PersonalBlock objKey={key} values={value} />
+                            return <OptionBlock key={key} objKey={key} values={value} />
                         }
                         else {
-                            return <div>{key} : {value}</div>
+                            return <div key={key}>{key} : {value}</div>
                         }
                     })
                 }
