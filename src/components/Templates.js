@@ -6,7 +6,6 @@ export const Animate = props => {
     console.log(personal.firstName)
     return (
         <>
-            {/* <TempAnimate.Header firstName={personal.firstName} lastName={personal.lastName} title={personal.title} /> */}
             <TempAnimate.Header firstName={personal.firstName} lastName={personal.lastName} title={personal.title} />
             Test Animate Template
         </>
