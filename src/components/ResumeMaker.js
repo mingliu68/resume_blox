@@ -6,7 +6,6 @@ import ResumeMakerViewer from './ResumeMakerViewer';
 
 const ResumeMaker = (props) => {
 
-
     return (
         <div style={{ display: "flex", height: "100%" }}>
             {/* <h1>Create a new resume</h1> */}
@@ -23,7 +22,7 @@ const ResumeMaker = (props) => {
                 }
 
             </div>
-            <ResumeMakerViewer template="Animate" />
+            <ResumeMakerViewer template="Animate" data={blocks_options} />
 
 
         </div>

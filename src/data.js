@@ -126,5 +126,15 @@ export const user_resources = {
 }
 
 export const blocks_options = {
+    personal: {
+        firstName: "Ming",
+        lastName: "Liu",
+        title: ["Software Engineer"]
+    },
+    contact: {
 
+    },
+    summary: {
+
+    }
 }
