@@ -22,7 +22,7 @@ const ResumeMaker = (props) => {
                 }
 
             </div>
-            <ResumeMakerViewer template="Animate" data={blocks_options} />
+            <ResumeMakerViewer template="Animate" data={blocks_options} resource={user_resources} />
 
 
         </div>

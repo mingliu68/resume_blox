@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Header = props => {
-    const { firstName, lastName, title } = { ...props }
+    const { firstName, lastName, title, personal_resource } = { ...props }
     return (
         <div id="header" style={{ height: "15%", boxSizing: "borderBox", margin: 0, padding: 18, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: " #262424" }}>
             <div style={{ width: 100, height: 100, backgroundColor: "white", borderRadius: 54, overflow: "hidden", position: "relative", borderWidth: 4, borderStyle: "solid", borderColor: "#ffcb00", backgroundColor: " #262424" }}>
@@ -12,7 +12,7 @@ export const Header = props => {
                 <div style={{ textAlign: "left", fontFamily: "Montserrat", color: "white", fontSize: 48, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 2 }}>{firstName} {lastName}</div>
                 {
                     title.map((item, index) => {
-                        return <div key={index} style={{ textAlign: "left", paddingLeft: 3, marginBottom: 5, fontsize: 13, color: "#eee", fontWeight: 400, fontFamily: "sans-serif", color: "white", letterSpacing: 5 }}>{item}</div>
+                        return <div key={index} style={{ textAlign: "left", paddingLeft: 3, marginBottom: 5, fontsize: 13, color: "#eee", fontWeight: 400, fontFamily: "sans-serif", color: "white", letterSpacing: 5 }}>{personal_resource.title[item]}</div>
                     })
                 }
 

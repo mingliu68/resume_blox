@@ -3,21 +3,13 @@ import React from "react";
 import { getTemplate } from './Templates';
 
 const ResumeMakerViewer = props => {
-    const { template, data } = { ...props }
-    console.log(props)
+    const { template, data, resource } = { ...props }
+    console.log(resource)
 
-    // const getTemplate = template => {
-    //     switch (template) {
-    //         case "Animate":
-    //             return <Templates.Animate />
-    //         default:
-    //             return
-    //     }
-    // }
     return (
         <div className="resumeMakerViewer">
             <div className="resumePaper">
-                {getTemplate(template, data)}
+                {getTemplate(template, data, resource)}
             </div>
         </div>
     )

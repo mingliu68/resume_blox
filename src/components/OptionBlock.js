@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { user_resources } from "../data";
+import { user_resources, blocks_options } from "../data";
 import AddOptionModal from "./AddOptionModal";
 
 const OptionBlock = (props) => {
@@ -20,6 +20,8 @@ const OptionBlock = (props) => {
         else {
             setActive_M(active_m.filter(element => element != index))
         }
+        blocks_options[objKey] = [...active_m]
+        console.log(blocks_options[objKey])
     }
 
     const switchModal = () => {

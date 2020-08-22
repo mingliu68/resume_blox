@@ -129,7 +129,7 @@ export const blocks_options = {
     personal: {
         firstName: "Ming",
         lastName: "Liu",
-        title: ["Software Engineer"]
+        title: [3]
     },
     contact: {
 
