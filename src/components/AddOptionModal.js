@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 const AddOptionModal = props => {
     const { switchModal, modal, inputValue, handleInputChange, addNewTag, msg } = props
     const inputElement = useRef(null)
+
     useEffect(() => {
         if (inputElement.current) {
             inputElement.current.focus()

@@ -46,6 +46,15 @@ const OptionBlock = (props) => {
         }
     }
 
+    useEffect(() => {
+        Array.isArray(blocks_options[cat][objKey])
+            ?
+            setActive_M([...blocks_options[cat][objKey]])
+            :
+            setActive_S(blocks_options[cat][objKey])
+            ;
+    })
+
     return (
         <div>
 
@@ -73,7 +82,7 @@ const OptionBlock = (props) => {
                             </div>
                         ))
                 }
-                <div className="draggable_box" onClick={switchModal} style={{ backgroundColor: "#666" }}>Add New</div>
+                <div className="draggable_box" onClick={switchModal} style={{ backgroundColor: "#666" }}>Add</div>
             </div>
 
             <AddOptionModal

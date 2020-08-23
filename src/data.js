@@ -1,49 +1,99 @@
 export const user_resources = {
     personal: {
+        category_display: "Personal Information",
         firstName: "Ming",
         lastName: "Liu",
-        title: [
-            "Software Engineer",
-            "Mobile App Developer",
-            "Frontend Developer",
-            "Backend Developer",
-            "Full Stack Engineer"
-        ],
-        _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"]
+        title_options: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
+        tag_options: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
+        // old data set below, for demo / prototype purpose
+        _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
+        title: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
     },
     contact: {
-        _email: ["ming@brooksidemediaco.com", "mingliudev@gmail.com"],
-        _phone: ["347-882-0395", "516-662-6028"],
-        location: ["New York, NY", "Ithaca, NY"],
+        category_display: "Contacts",
+        email_options: ["ming@brooksidemediaco.com", "mingliudev@gmail.com"],
+        phone_options: ["347-882-0395", "516-662-6028"],
+        location_options: ["New York, NY", "Ithaca, NY"],
     },
     summary: {
-        title: ["Summary", "Objective"],
-        description: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare ante ante, id aliquam eros mattis nec. Duis mollis pellentesque ex vel varius. Vivamus eget ex condimentum, suscipit velit non, lacinia metus. Vestibulum semper in lectus sit amet feugiat. Sed ultricies dictum odio, non pharetra turpis blandit et. Aenean sodales pulvinar sem nec sagittis. Praesent ultrices tempor fermentum. Donec gravida, est eu feugiat sollicitudin, enim ipsum tempus nisl, et ornare felis orci et elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas euismod iaculis odio vel lacinia. Aenean mollis felis eu leo ullamcorper molestie. Nam quis augue risus. Maecenas ac ligula quis diam malesuada venenatis.",
-            "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
-            "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-        ],
-        _tags: ["AWS", "DevOp", "Cloud", "Product Manager", "React", "Python"]
+        category_display: "Summary",
+        tag_options: ["AWS", "DevOp", "Cloud", "Product Manager", "React", "Python"],
+        blocks: [
+            {
+                title: "Summary",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare ante ante, id aliquam eros mattis nec. Duis mollis pellentesque ex vel varius. Vivamus eget ex condimentum, suscipit velit non, lacinia metus. Vestibulum semper in lectus sit amet feugiat. Sed ultricies dictum odio, non pharetra turpis blandit et. Aenean sodales pulvinar sem nec sagittis. Praesent ultrices tempor fermentum. Donec gravida, est eu feugiat sollicitudin, enim ipsum tempus nisl, et ornare felis orci et elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas euismod iaculis odio vel lacinia. Aenean mollis felis eu leo ullamcorper molestie. Nam quis augue risus. Maecenas ac ligula quis diam malesuada venenatis.",
+                tags: ["AWS", "DevOp", "Cloud"]
+            },
+            {
+                title: "Objective",
+                description: "Donec vitae finibus nisl. Aliquam ipsum mi, feugiat vitae arcu non, ultricies vulputate erat. Maecenas at odio vehicula, cursus ligula vitae, feugiat neque. Nam massa ipsum, blandit non urna non, dictum mattis sapien. Donec molestie vel tortor eget finibus. Nam sit amet lorem pharetra, feugiat purus eget, iaculis tellus. Curabitur urna velit, sagittis id est quis, suscipit dignissim turpis. Pellentesque vel elementum turpis. Pellentesque posuere ornare euismod. Suspendisse potenti. Sed fringilla quam nisi, nec pharetra arcu tempor id. Nunc consectetur condimentum purus, vitae lobortis lorem porttitor vitae. Suspendisse sed posuere leo. Sed ac sollicitudin nulla. Nulla eget metus sed mauris tincidunt viverra quis at odio.",
+                tags: ["AWS", "React", "Python"]
+            },
+            {
+                title: "Summary",
+                description: "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                tags: ["AWS", "Python", "Product Manager"]
+            }
+        ]
     },
-    social: [
-        {
-            media: 'Linkedin',
-            userName: 'mingliu68'
-        },
-        {
-            media: 'Twitter',
-            userName: 'intoxic8_sky'
-        },
-        {
-            media: 'Github',
-            userName: 'mingliu68'
-        }
-    ],
+
+    social: {
+        category_display: "Social",
+        tag_options: ["developer", "engineer", "product manager", "mobile developer"],
+        blocks: [
+            {
+                media: 'Linkedin',
+                userName: 'mingliu68',
+                link: "",
+                tags: []
+            },
+            {
+                media: 'Twitter',
+                userName: 'intoxic8_sky',
+                link: "",
+                tags: []
+            },
+            {
+                media: 'Github',
+                userName: 'mingliu68',
+                link: "",
+                tags: []
+            }
+        ]
+    },
+
     skills: {
-        title: ['Technology', 'Tech Stack', 'Soft Skills', 'Web Dev', 'Languages', 'Frameworks', 'Libraries'],
-        _skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js']
+        category_display: "Skills",
+        tag_options: ["developer", "engineer", "product manager", "mobile developer", "web dev", 'full stack'],
+        title_options: ['Technology', 'Tech Stack', 'Soft Skills', 'Web Dev', 'Languages', 'Frameworks', 'Libraries'],
+        skill_options: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js'],
+        blocks: [
+            {
+                title: "Technology",
+                skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js'],
+                tags: ['web dev', 'full stack']
+            },
+            {
+                title: "Languages",
+                skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js'],
+                tags: ['web dev', 'full stack']
+            },
+            {
+                title: "Frameworks",
+                skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Express', 'Python', 'PHP', 'React Native', 'Node.js'],
+                tags: ['web dev', 'full stack', 'developer']
+            },
+        ]
     },
-    education: [
+    education: {
+        category_display: "Education",
+        tag_options: ["developer", "engineer", "product manager", "mobile developer", "web dev", 'full stack'],
+    },
+
+
+
+
+    [
         {
             institution: ["Hofstra University"],
             startYear: "2007",
@@ -129,7 +179,7 @@ export const blocks_options = {
     personal: {
         firstName: "Ming",
         lastName: "Liu",
-        title: [3]
+        title: 1
     },
     contact: {
 

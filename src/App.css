@@ -1,8 +1,6 @@
 .App {
   text-align: center;
   height: 100vh;
-  border: 1px solid grey; 
-  overflow: hidden;
 }
 
 .App-logo {
@@ -18,7 +16,6 @@
 
 .App-header {
   background-color: #282c34;
-  /* min-height: 100px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,6 +23,9 @@
   /* font-size: calc(10px + 2vmin); */
   color: white;
   padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .App-header button { 
@@ -45,14 +45,12 @@
   background-color: darkgreen;
   outline: none;
   transition-duration: 0.25s;
-
 }
 
 .App-header  .currentLink {
   background-color: darkgreen;
   outline: none;
 }
-
 
 .App-link {
   color: #61dafb;
@@ -97,7 +95,6 @@
   padding: 50px;
   background-color: rgb(0,0,0,0.6);
   box-sizing: border-box;
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -108,9 +105,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   z-index: 10;
-  
   transition-duration: 0.5s
 }
 
@@ -124,8 +119,7 @@
 }
 
 .resumeMakerViewer {
-  overflow-y: auto;
-  overflow-x: scroll;
+  overflow: auto;
   background-color: #eeeeee;  
   height: 100%;
   width: 100%;
@@ -134,8 +128,10 @@
 }
 
 .resumePaper {
-  width: 918px;
-  height: 1188px;
+  width: 800px;
+  height: 1150px;
   background-color: #f2f2f2;
-  box-shadow: 0 0 10px rgb(0,0,0,0.1)
+  box-shadow: 0 0 10px rgb(0,0,0,0.15);
+  margin: 0 auto;
+  display: inline-block;
 }
