@@ -1,3 +1,4 @@
+// raw resources for creating resume
 export const user_resources = {
     personal: {
         category_display: "Personal Information",
@@ -232,10 +233,42 @@ export const user_resources = {
 
 }
 
+// saved customized resumes 
+export const resumes = [
+    {
+        res_id: 3282,
+        style_id: 1,
+        personal: {
+
+        },
+        contact: {
+
+        },
+        summary: {
+
+        },
+        social: {
+
+        },
+        skills: {
+
+        },
+        education: {
+
+        },
+        projects: {
+
+        },
+        experience: {
+
+        }
+
+    }
+]
+
+// block options for resume currently been created / edited
 export const blocks_options = {
     personal: {
-        firstName: "Ming",
-        lastName: "Liu",
         title: 1
     },
     contact: {
