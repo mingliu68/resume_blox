@@ -2,7 +2,7 @@ const initialState = {
 
 }
 
-export const blockOptionsReducers = (state, action) => {
+export const CurrentResumeContext = (state, action) => {
     switch (action.type) {
         default:
             return

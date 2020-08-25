@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import { Route, useLocation } from "react-router-dom";
-import ResumeMaker from './components/ResumeMaker'
+import OldResumeMaker from './components/oldResumeMaker'
 
 function App(props) {
 
@@ -17,9 +17,9 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <div onClick={() => goToRoute('/')}><h1 >resumeBlox</h1></div>
-        <button onClick={() => goToRoute('/create')} className={location.pathname == "/create" ? "currentLink" : null}>Create a new Resume</button>
+        <button onClick={() => goToRoute('/create_old')} className={location.pathname == "/create_old" ? "currentLink" : null}>CNR</button>
       </header>
-      <Route path='/create' component={ResumeMaker} />
+      <Route path='/create_old' component={OldResumeMaker} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ const initialState = {
 
 }
 
-export const resourceReducers = (state, action) => {
+export const BlockOptionContext = (state, action) => {
     switch (action.type) {
         default:
             return

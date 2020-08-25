@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { user_resources, blocks_options } from "../data";
+import { ResourceContext } from '../contexts/resource-context';
+
 import OptionBlock from './OptionBlock'
+import { ResourceContext } from "../contexts/resource-context";
+
+
 
 const ResumeMakerPanel = props => {
     return (

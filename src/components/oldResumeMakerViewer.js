@@ -2,7 +2,7 @@ import React from "react";
 // import * as Templates from './Templates';
 import { getTemplate } from './Templates';
 
-const ResumeMakerViewer = props => {
+const OldResumeMakerViewer = props => {
     const { template, data, resource } = { ...props }
     console.log(resource)
 
@@ -15,4 +15,4 @@ const ResumeMakerViewer = props => {
     )
 }
 
-export default ResumeMakerViewer;
+export default OldResumeMakerViewer;
