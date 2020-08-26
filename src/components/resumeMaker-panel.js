@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useCallback } from "react";
+import React, { useContext, useEffect, useCallback, useState } from "react";
 import { user_resources, blocks_options } from "../data";
 import { ResourceContext } from '../contexts/resource-context';
 import ResumeMakerPanel_Personal from '../components/resumeMaker-panel_personal';
@@ -9,13 +9,15 @@ import OptionBlock from './OptionBlock'
 const ResumeMakerPanel = () => {
 
     const [state, dispatch] = useContext(ResourceContext);
+    const [ready, setReady] = useState(false)
     // console.log(state.current_resume)
-    const getResource = useCallback(() => {
-        dispatch({
+    const getResource = useCallback(async () => {
+        await dispatch({
             type: "INITIAL_RESOURCE",
             resources: user_resources,  //data from dummy data, will be update to api later
             current: blocks_options
         })
+        setReady(true)
     })
 
     useEffect(() => {
@@ -38,7 +40,14 @@ const ResumeMakerPanel = () => {
 
     return (
         <div className="resumeMakerPanel" style={{ overflowY: "auto" }}>
-            <ResumeMakerPanel_Personal />
+            {
+                ready
+                    ?
+                    <ResumeMakerPanel_Personal />
+                    :
+                    <div>Getting Resources</div>
+            }
+
             {/* <h1>{state.personal.category_display}</h1>
             {
                 state.personal.firstName == ""

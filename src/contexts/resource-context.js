@@ -112,7 +112,11 @@ const reducer = (state, action) => {
             }
         case "UPDATE_CURRENT_RESUME_PERSONAL":
             return {
-
+                ...state,
+                current_resume: {
+                    ...state.current_resume,
+                    personal: action.values
+                }
             }
         default:
             throw new Error()

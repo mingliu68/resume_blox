@@ -5,9 +5,9 @@ import { ResourceContext } from '../contexts/resource-context'
 
 const OptionBlock = (props) => {
     const [state, dispatch] = useContext(ResourceContext)
-    const { objKey, cat } = props
+    const { objKey, cat, current, updateCurrent } = props
 
-    console.log(objKey, state.current_resume[cat][`${objKey}_selection`])
+    // console.log(objKey, state.current_resume[cat][`${objKey}_selection`])
 
     const [values, setValues] = useState(props.values)
     const multiple = objKey[0] == "_"
@@ -29,8 +29,13 @@ const OptionBlock = (props) => {
         else {
             setActive_m(active_m.filter(element => element != index))
         }
-        blocks_options[objKey] = [...active_m]
-        console.log(blocks_options[objKey])
+        let newCurrent = { ...current }
+        newCurrent[`${objKey}_selection`] = [...active_m]
+        updateCurrent(newCurrent);
+    }
+
+    const handleSingleClick = (index) => {
+        setActive_s(active_s == index ? -1 : index)
     }
 
     const switchModal = () => {
@@ -56,12 +61,11 @@ const OptionBlock = (props) => {
     }
 
     useEffect(() => {
-        Array.isArray(state.current_resume[cat][`${objKey}_selection`])
+        Array.isArray(current[`${objKey}_selection`])
             ?
-            setActive_m(state.current_resume[cat][`${objKey}_selection`])
+            setActive_m(current[`${objKey}_selection`])
             :
-            setActive_s(state.current_resume[cat][`${objKey}_selection`])
-            ;
+            setActive_s(current[`${objKey}_selection`])
 
         // console.log(multiple ? `Multiple: ${objKey} ${active_m}` : `Single: ${objKey} ${active_s}`)
 
@@ -79,7 +83,7 @@ const OptionBlock = (props) => {
                             <div
                                 className={active_s == index ? "draggable_box active_option" : "draggable_box"}
                                 key={index}
-                                onClick={() => setActive_s(active_s == index ? -1 : index)}
+                                onClick={() => handleSingleClick(index)}
                             >
                                 {value}
                             </div>
