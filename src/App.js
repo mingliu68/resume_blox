@@ -20,7 +20,7 @@ function App(props) {
         <div onClick={() => goToRoute('/')}><h1 >resumeBlox</h1></div>
         <div>
           <button onClick={() => goToRoute('/create_old')} className={location.pathname == "/create_old" ? "currentLink" : null}>CNR</button>
-          <button onClick={() => goToRoute("/create")} className={location.pathname == "/create_old" ? "currentLink" : null}>Create New Resume</button>
+          <button onClick={() => goToRoute("/create")} className={location.pathname == "/create" ? "currentLink" : null}>Create New Resume</button>
         </div>
       </header>
       <Route path='/create_old' component={OldResumeMaker} />

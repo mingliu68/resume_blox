@@ -2,22 +2,23 @@ import React, { createContext, useReducer } from "react"
 
 export const ResourceContext = createContext();
 
+// item allowing multiple selection has "_" in front of key
 const initialState = {
     personal: {
         category_display: "",
         firstName: "",
         lastName: "",
         title_options: [],
-        tag_options: [],
+        _tag_options: [],
         // old data set below, for demo / prototype purpose
-        _tags: [],
-        title: [],
+        // _tags: [],
+        // title: [],
     },
     contact: {
         category_display: "",
-        email_options: [],
-        phone_options: [],
-        location_options: [],
+        _email_options: [],
+        _phone_options: [],
+        _location_options: [],
     },
     summary: {
         category_display: "",
@@ -50,6 +51,47 @@ const initialState = {
         category_display: "",
         tag_options: [],
         companies: []
+    },
+    // block_options: {
+
+    //     contact: {
+
+    //     },
+    //     summary: {
+
+    //     }
+    // },
+    current_resume: {
+        res_id: "",
+        style_id: "",
+        tags: {
+
+        },
+        personal: {
+            title_options_selection: null,
+            _tag_options_selection: []
+        },
+        contact: {
+
+        },
+        summary: {
+
+        },
+        social: {
+
+        },
+        skills: {
+
+        },
+        education: {
+
+        },
+        projects: {
+
+        },
+        experience: {
+
+        }
     }
 }
 
@@ -58,14 +100,19 @@ const reducer = (state, action) => {
         case "INITIAL_RESOURCE":
             return {
                 ...state,
-                personal: action.results.personal,
-                contact: action.results.contact,
-                summary: action.results.summary,
-                social: action.results.social,
-                skills: action.results.skills,
-                education: action.results.education,
-                projects: action.results.projects,
-                experience: action.results.experience
+                personal: action.resources.personal,
+                contact: action.resources.contact,
+                summary: action.resources.summary,
+                social: action.resources.social,
+                skills: action.resources.skills,
+                education: action.resources.education,
+                projects: action.resources.projects,
+                experience: action.resources.experience,
+                current_resume: action.current
+            }
+        case "UPDATE_CURRENT_RESUME_PERSONAL":
+            return {
+
             }
         default:
             throw new Error()

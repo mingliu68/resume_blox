@@ -1,33 +1,25 @@
-import React, { useState, useEffect, useCallback, useRef, useContext } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { user_resources, blocks_options } from "../data";
 import AddOptionModal from "./AddOptionModal";
-import { ResourceContext } from '../contexts/resource-context'
 
-const OptionBlock = (props) => {
-    const [state, dispatch] = useContext(ResourceContext)
+const OldOptionBlock = (props) => {
     const { objKey, cat } = props
-
-    console.log(objKey, state.current_resume[cat][`${objKey}_selection`])
-
     const [values, setValues] = useState(props.values)
     const multiple = objKey[0] == "_"
-    const [active_m, setActive_m] = useState([])
-
-    const [active_s, setActive_s] = useState(-1)
-    // console.log(multiple ? `Multiple: ${objKey} ${active_m}` : `Single: ${objKey} ${active_s}`)
-
+    // const multiple = Array.isArray(values)
+    const [active_m, setActive_M] = useState([])
+    const [active_s, setActive_S] = useState(-1)
     const [modal, setModal] = useState(false)
     const [inputValue, setInputValue] = useState("")
     const [msg, setMsg] = useState(false)
 
     const handleMultiClick = (index) => {
         const i = active_m.findIndex((element) => element == index)
-        // item clicked is not currently active, i return -1
         if (i < 0) {
-            setActive_m([...active_m, index])
+            setActive_M([...active_m, index])
         }
         else {
-            setActive_m(active_m.filter(element => element != index))
+            setActive_M(active_m.filter(element => element != index))
         }
         blocks_options[objKey] = [...active_m]
         console.log(blocks_options[objKey])
@@ -56,16 +48,13 @@ const OptionBlock = (props) => {
     }
 
     useEffect(() => {
-        Array.isArray(state.current_resume[cat][`${objKey}_selection`])
+        Array.isArray(blocks_options[cat][objKey])
             ?
-            setActive_m(state.current_resume[cat][`${objKey}_selection`])
+            setActive_M([...blocks_options[cat][objKey]])
             :
-            setActive_s(state.current_resume[cat][`${objKey}_selection`])
+            setActive_S(blocks_options[cat][objKey])
             ;
-
-        // console.log(multiple ? `Multiple: ${objKey} ${active_m}` : `Single: ${objKey} ${active_s}`)
-
-    }, [])
+    })
 
     return (
         <div>
@@ -79,7 +68,7 @@ const OptionBlock = (props) => {
                             <div
                                 className={active_s == index ? "draggable_box active_option" : "draggable_box"}
                                 key={index}
-                                onClick={() => setActive_s(active_s == index ? -1 : index)}
+                                onClick={() => setActive_S(active_s == index ? -1 : index)}
                             >
                                 {value}
                             </div>
@@ -110,4 +99,4 @@ const OptionBlock = (props) => {
     )
 }
 
-export default OptionBlock;
+export default OldOptionBlock;

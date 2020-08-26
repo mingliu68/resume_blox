@@ -9,8 +9,10 @@ const ResumeMakerView = () => {
 
     return (
         <ResourceContextProvider>
-            <ResumeMakerPanel />
-            <ResumeMakerViewer />
+            <div style={{ display: "flex", height: "100%", paddingTop: 80, boxSizing: 'border-box' }}>
+                <ResumeMakerPanel />
+                <ResumeMakerViewer />
+            </div>
         </ResourceContextProvider>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { user_resources, blocks_options } from "../data";
-import OptionBlock from './OptionBlock'
+import OldOptionBlock from './oldOptionBlock'
 
 const OldResumeMakerPanel = props => {
     return (
@@ -10,7 +10,7 @@ const OldResumeMakerPanel = props => {
                 {
                     Object.entries(user_resources.personal).map(([key, value], i) => {
                         if (Array.isArray(value)) {
-                            return <OptionBlock key={key} objKey={key} values={value} cat="personal" />
+                            return <OldOptionBlock key={key} objKey={key} values={value} cat="personal" />
                         }
                         else {
                             if (!key == "firstName" && !key == "lastName") {

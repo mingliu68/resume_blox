@@ -5,10 +5,10 @@ export const user_resources = {
         firstName: "Ming",
         lastName: "Liu",
         title_options: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
-        tag_options: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
+        _tag_options: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
         // old data set below, for demo / prototype purpose
-        _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
-        title: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
+        // _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
+        // title: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
     },
     contact: {
         category_display: "Contacts",
@@ -236,9 +236,14 @@ export const user_resources = {
 // saved customized resumes 
 export const resumes = [
     {
-        res_id: 3282,
-        style_id: 1,
+        res_id: "3288",
+        style_id: "1",
+        tags: {
+
+        },
         personal: {
+            title_options_selection: 1,
+            _tag_options_selection: []
 
         },
         contact: {
@@ -262,19 +267,39 @@ export const resumes = [
         experience: {
 
         }
-
     }
 ]
 
 // block options for resume currently been created / edited
 export const blocks_options = {
+    res_id: "3288",
+    style_id: "1",
+    tags: {
+
+    },
     personal: {
-        title: 1
+        title_options_selection: 1,
+        _tag_options_selection: [1, 4]
     },
     contact: {
 
     },
     summary: {
+
+    },
+    social: {
+
+    },
+    skills: {
+
+    },
+    education: {
+
+    },
+    projects: {
+
+    },
+    experience: {
 
     }
 }

@@ -15,7 +15,7 @@ export const Header = props => {
                         return <div key={index} style={{ textAlign: "left", paddingLeft: 3, marginBottom: 5, fontsize: 13, color: "#eee", fontWeight: 400, fontFamily: "sans-serif", color: "white", letterSpacing: 5 }}>{personal_resource.title[item]}</div>
                     })
                 } */}
-                <div style={{ textAlign: "left", paddingLeft: 3, marginBottom: 5, fontsize: 13, color: "#eee", fontWeight: 400, fontFamily: "sans-serif", color: "white", letterSpacing: 5 }}>{personal_resource.title[title]}</div>
+                <div style={{ textAlign: "left", paddingLeft: 3, marginBottom: 5, fontsize: 13, color: "#eee", fontWeight: 400, fontFamily: "sans-serif", color: "white", letterSpacing: 5 }}>{personal_resource.title_options[title]}</div>
             </div>
         </div>
     )
