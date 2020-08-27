@@ -4,7 +4,7 @@ export const user_resources = {
         category_display: "Personal Information",
         firstName: "Ming",
         lastName: "Liu",
-        title_options: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer"],
+        title_options: ["Software Engineer", "Mobile App Developer", "Frontend Developer", "Backend Developer", "Full Stack Engineer", "Web Developer"],
         _tag_options: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
         // old data set below, for demo / prototype purpose
         // _tags: ["Frontend", "Full Stack", "Backend", "Mobile", "Software"],
@@ -13,7 +13,8 @@ export const user_resources = {
     contact: {
         category_display: "Contacts",
         email_options: ["ming@brooksidemediaco.com", "mingliudev@gmail.com"],
-        phone_options: ["347-882-0395", "516-662-6028"],
+        phone_options: ["347-882-0395"],
+        website_options: ["mingliu.dev", "intoxic8studio.com"],
         location_options: ["New York, NY", "Ithaca, NY"],
     },
     summary: {
@@ -31,7 +32,7 @@ export const user_resources = {
                 tags: ["AWS", "React", "Python"]
             },
             {
-                title: "Summary",
+                title: "Personal Profile",
                 description: "Nulla vitae pulvinar sem. In vel metus mauris. Phasellus consectetur sed massa ultrices consectetur. In volutpat sem in facilisis pharetra. Donec vestibulum est augue, at interdum dui bibendum eget. Curabitur pretium quam vitae auctor vestibulum. Morbi efficitur tortor ac ex tincidunt, eu faucibus tellus aliquet. Mauris quis magna venenatis libero dignissim porta ut in libero. Maecenas ullamcorper egestas molestie. Sed mattis ac libero id vestibulum. Nulla pharetra, lectus in tristique faucibus, lacus metus dapibus nunc, a viverra felis nulla eget ex. Cras consectetur libero at mi bibendum, in scelerisque tortor vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
                 tags: ["AWS", "Python", "Product Manager"]
             }

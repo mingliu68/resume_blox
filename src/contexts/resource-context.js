@@ -68,7 +68,7 @@ const initialState = {
 
         },
         personal: {
-            title_options_selection: null,
+            title_options_selection: "",
             _tag_options_selection: []
         },
         contact: {
@@ -96,6 +96,7 @@ const initialState = {
 }
 
 const reducer = (state, action) => {
+
     switch (action.type) {
         case "INITIAL_RESOURCE":
             return {
@@ -111,6 +112,7 @@ const reducer = (state, action) => {
                 current_resume: action.current
             }
         case "UPDATE_CURRENT_RESUME_PERSONAL":
+            console.log(action.values)
             return {
                 ...state,
                 current_resume: {
@@ -118,6 +120,12 @@ const reducer = (state, action) => {
                     personal: action.values
                 }
             }
+        case "UPDATE_RESOURCE_PERSONAL":
+            return {
+                ...state,
+                personal: action.values
+            }
+
         default:
             throw new Error()
     }

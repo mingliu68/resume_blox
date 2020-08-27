@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef, useContext } from "react";
-import { user_resources, blocks_options } from "../data";
+// import { user_resources, blocks_options } from "../data";
 import AddOptionModal from "./AddOptionModal";
 import { ResourceContext } from '../contexts/resource-context'
 
 const OptionBlock = (props) => {
     const [state, dispatch] = useContext(ResourceContext)
-    const { objKey, cat, current, updateCurrent } = props
+    const { objKey, cat, current, updateCurrent, updateResource } = props
 
     // console.log(objKey, state.current_resume[cat][`${objKey}_selection`])
 
@@ -19,6 +19,8 @@ const OptionBlock = (props) => {
     const [modal, setModal] = useState(false)
     const [inputValue, setInputValue] = useState("")
     const [msg, setMsg] = useState(false)
+    const [display, setDisplay] = useState("")
+    const [clicked, setClicked] = useState(false)
 
     const handleMultiClick = (index) => {
         const i = active_m.findIndex((element) => element == index)
@@ -32,11 +34,30 @@ const OptionBlock = (props) => {
         let newCurrent = { ...current }
         newCurrent[`${objKey}_selection`] = [...active_m]
         updateCurrent(newCurrent);
+        console.log("newCurrent : " + JSON.stringify(newCurrent))
     }
 
     const handleSingleClick = (index) => {
-        setActive_s(active_s == index ? -1 : index)
+        console.log("index : " + index)
+        console.log("single active_before : " + active_s)
+        if (active_s === index) {
+            setActive_s(-1)
+            setDisplay(`single active -1`)
+        } else {
+            setActive_s(index)
+            setDisplay(`single active ${index}`)
+        }
+
+        console.log("single active_after : " + active_s)
+
+        let newCurrent = { ...current }
+        newCurrent[`${objKey}_selection`] = active_s
+
+        updateCurrent(newCurrent)
+        console.log("newCurrent : " + JSON.stringify(newCurrent))
+
     }
+
 
     const switchModal = () => {
         setInputValue("")
@@ -51,7 +72,9 @@ const OptionBlock = (props) => {
     const addNewTag = () => {
         if (inputValue && !values.includes(inputValue)) {
             setValues([...values, inputValue])
-            user_resources[cat][objKey].push(inputValue)
+            let newResource = { ...state[cat] }
+            newResource[`${objKey}`] = [...values]
+            updateResource(newResource)
             switchModal()
         }
         else {
@@ -66,16 +89,12 @@ const OptionBlock = (props) => {
             setActive_m(current[`${objKey}_selection`])
             :
             setActive_s(current[`${objKey}_selection`])
-
-        // console.log(multiple ? `Multiple: ${objKey} ${active_m}` : `Single: ${objKey} ${active_s}`)
-
     }, [])
 
     return (
         <div>
-
             <h3>{objKey}</h3>
-
+            {display}
             <div className="draggable_box_container">
                 {
                     !multiple
